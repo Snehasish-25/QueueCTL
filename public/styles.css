@@ -1,0 +1,49 @@
+:root {
+  --bg: #0b0e13;
+  --card: #121722;
+  --muted: #7f8ca4;
+  --txt: #e6edf6;
+  --ok: #1f8a52;
+  --warn: #b8860b;
+  --danger: #b73a3a;
+  --info: #2c7bd9;
+  --accent: #7aa2f7;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--txt); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+header h1 { margin: 0; font-size: 24px; }
+header .subtle { color: var(--muted); margin-top: 6px; }
+
+.grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+
+.card { background: var(--card); border: 1px solid #1e2635; border-radius: 12px; padding: 14px; }
+.card .label { color: var(--muted); font-size: 12px; }
+.card .value { font-size: 28px; font-weight: 700; margin-top: 6px; }
+.card .value.small { font-size: 14px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card.ok .value { color: var(--ok); }
+.card.warn .value { color: var(--warn); }
+.card.danger .value { color: var(--danger); }
+.card.info .value { color: var(--info); }
+
+.row { margin-top: 10px; display: flex; gap: 8px; }
+button { background: var(--accent); border: none; color: #0a1220; padding: 8px 12px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+button.ghost { background: transparent; color: var(--muted); border: 1px solid #293246; }
+button:hover { filter: brightness(1.05); }
+
+.tabs { display: flex; gap: 8px; margin: 24px 0 12px; }
+.tabs button { background: transparent; color: var(--txt); border: 1px solid #283246; padding: 8px 12px; border-radius: 999px; }
+.tabs button.active { background: var(--accent); color: #0a1220; border-color: var(--accent); }
+
+table { width: 100%; border-collapse: collapse; background: var(--card); border: 1px solid #1e2635; border-radius: 12px; overflow: hidden; }
+thead { background: #171d2a; }
+th, td { padding: 10px 12px; border-bottom: 1px solid #1e2635; text-align: left; font-size: 14px; }
+tbody tr:hover { background: #141a27; }
+.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+.clip { max-width: 420px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.muted { color: var(--muted); text-align: center; }
+
+.foot { color: var(--muted); font-size: 12px; }
