@@ -20,7 +20,7 @@ It includes:
 
 ### Installation
 ```bash
-git clone https://github.com/<your-username>/queuectl.git
+git clone https://github.com/Snehasish-25/QueueCTL.git
 cd queuectl
 npm install
 ```
